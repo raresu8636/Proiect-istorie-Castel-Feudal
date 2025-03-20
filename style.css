@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* Stânga, Mijloc, Dreapta */
+    grid-template-rows: auto 1fr auto; /* Header, Conținut, Footer */
+    grid-template-areas:
+        "header header header"
+        "sidebar content images"
+        "footer footer footer";
+    background-color: #f4f4f4;
+    color: #333;
+    box-sizing: border-box;
+}
+
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    grid-area: sidebar;
+    background: #8d6e63;
+    padding: 20px;
+    text-align: left; /* Aliniere la stânga */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Aliniere la stânga */
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #6d4c41;
+}
+
+section {
+    grid-area: content;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto; /* Centrare pe orizontală */
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    grid-area: images;
+    padding: 20px;
+    text-align: center;
+}
+
+aside img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+button {
+    background: #6d4c41;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #8d6e63;
+}
+
+.home-button {
+    display: none; /* Ascunde butonul Home, deoarece nav servește drept meniu */
+}
+
+/* Elimină stilurile vechi pentru img, deoarece imaginile vor fi în aside */
+/* img { */
+/*    max-width: 200px; */
+/*    height: auto; */
+/*    position: absolute; */
+/*    top: 200px; */
+/*    left: -100px; */
+/*    z-index: -1; */
+/* } */
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.categories .category img {
+    max-width: 150px; /* Limitează lățimea maximă a imaginilor */
+    height: auto; /* Păstrează aspectul proporțional */
+    border-radius: 5px; /* Adaugă un aspect plăcut */
+}
