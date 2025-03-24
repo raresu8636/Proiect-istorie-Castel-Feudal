@@ -5,10 +5,11 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 200px 1fr 200px; /* Stânga, Mijloc, Dreapta */
-    grid-template-rows: auto 1fr auto; /* Header, Conținut, Footer */
+    grid-template-rows: auto auto 1fr auto; /* Header, Nav, Conținut, Footer */
     grid-template-areas:
         "header header header"
         "sidebar content images"
+        "section section section"
         "footer footer footer";
     background-color: #f4f4f4;
     color: #333;
@@ -55,7 +56,7 @@ nav ul li a:hover {
 }
 
 section {
-    grid-area: content;
+    grid-area: section;
     padding: 20px;
     max-width: 800px;
     margin: auto; /* Centrare pe orizontală */
