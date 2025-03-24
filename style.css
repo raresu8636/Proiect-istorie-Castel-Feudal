@@ -22,6 +22,8 @@ aside img {
   height: auto; /* Menține proporțiile imaginii */
   display: block; /* Asigură că imaginea se comportă ca un element de bloc */
   margin: 0 auto; /* Center image inside the container */
+  position: absolute; /* Poziționare absolută pentru a ieși peste alte elemente */
+  z-index: 10; /* Asigură că imaginea este în față */
 }
 
 /* Când dai hover pe imagine */
@@ -35,19 +37,12 @@ aside {
   grid-area: images;
   padding: 20px;
   text-align: center;
-  overflow: hidden; /* Ascunde orice parte a imaginii care iese din container */
+  overflow: visible; /* Permite imaginii să iasă din container */
   position: relative; /* Permite manipularea poziției elementelor din interior */
-  transition: width 0.3s ease, height 0.3s ease; /* Tranziție pentru dimensiunile containerului */
   min-width: 150px; /* Dimensiune minimă pentru lățimea containerului */
   min-height: 150px; /* Dimensiune minimă pentru înălțimea containerului */
   max-width: 500px; /* Dimensiune maximă pentru lățimea containerului */
   max-height: 500px; /* Dimensiune maximă pentru înălțimea containerului */
-}
-
-/* Când dai hover pe <aside>, mărește-l */
-aside:hover {
-  width: auto; /* Permite containerului să crească pentru a se potrivi imaginii mărite */
-  height: auto; /* Permite containerului să crească pe verticală */
 }
 
 /* Stilul pentru header */
