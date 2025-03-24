@@ -29,7 +29,7 @@ aside img {
 /* Când dai hover pe imagine */
 aside img:hover {
   transform: scale(2); /* Mărește imaginea la 200% din dimensiunea originală */
-  transform-origin: center; /* Setează centrul de scalare în mijloc */
+  transform-origin: right-center; /* Setează centrul de scalare în mijloc */
   z-index: 10; /* Pune imaginea în față când este mărită */
 }
 
