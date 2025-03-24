@@ -82,27 +82,22 @@ aside img {
     position: relative;
     display: inline-block;
     overflow: hidden; /* Ascunde orice parte din imagine care depășește containerul */
-    width: 100%; /* Containerul va lua toată lățimea disponibilă */
+    width: 100%; /* Asigură că containerul va lua toată lățimea disponibilă */
     height: auto; /* Permite containerului să se ajusteze în funcție de imagine */
 }
 
 /* Stiluri pentru imagine */
 .zoom-image {
     width: 100%;
-    transition: transform 0.5s ease-in-out; /* Tranziție lină la schimbarea dimensiunii */
-    object-fit: cover;  /* Asigură că imaginea se ajustează corect */
+    transition: transform 0.3s ease; /* Tranziție lină la zoom */
+    object-fit: cover; /* Asigură că imaginea se ajustează corect */
     display: block; /* Elimină orice spațiu gol de sub imagine */
 }
 
 /* Efectul de zoom la hover */
 .zoom-container:hover .zoom-image {
-    transform: scale(2); /* Zoom de 2 ori pe imagine */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2); /* Centrează imaginea și aplică zoom-ul */
+    transform: scale(1.5); /* Mărește imaginea la 1.5x dimensiunea sa */
 }
-
 
 footer {
     grid-area: footer;
