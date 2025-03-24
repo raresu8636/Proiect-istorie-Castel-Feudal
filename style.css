@@ -109,6 +109,8 @@ aside img {
     z-index: 2; /* Asigură că imaginea mărită va fi vizibilă deasupra altor imagini */
 }
 
+
+
 footer {
     grid-area: footer;
     background-color: #222;
