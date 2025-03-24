@@ -77,39 +77,6 @@ aside img {
     margin-bottom: 10px;
     border-radius: 5px;
 }
-/* Stiluri pentru containerul imaginii */
-.zoom-container {
-    position: relative;
-    display: inline-block;
-    overflow: hidden; /* Previne ieșirea imaginii din container */
-    width: 100%;  /* Asigură că containerul va ocupa întreaga lățime a secțiunii */
-    height: auto; /* Permite containerului să se ajusteze pe înălțime */
-}
-
-/* Stiluri pentru imagine */
-.zoom-image {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-    object-fit: cover;
-    display: block;
-    z-index: 1; /* Asigură că imaginea va fi deasupra altor elemente */
-}
-
-/* Efectul de zoom la hover */
-.zoom-container:hover .zoom-image {
-    transform: scale(2);  /* Mărește imaginea de două ori */
-    width: 100%;  /* Imaginea va ocupa întreaga lățime a containerului */
-    height: auto;  /* Înălțimea va fi ajustată automat pentru a păstra raportul de aspect */
-    object-fit: cover; /* Imaginea va acoperi întregul container */
-    position: absolute; /* Permite poziționarea imaginii în afacerea containerului */
-    top: 50%; /* Centrează imaginea pe verticală */
-    left: 50%; /* Centrează imaginea pe orizontală */
-    transform: translate(-50%, -50%) scale(2);  /* Mărește și centrează imaginea */
-    z-index: 2; /* Asigură că imaginea mărită va fi vizibilă deasupra altor imagini */
-}
-
-
 
 footer {
     grid-area: footer;
