@@ -38,6 +38,10 @@ aside {
   overflow: hidden; /* Ascunde orice parte a imaginii care iese din container */
   position: relative; /* Permite manipularea poziției elementelor din interior */
   transition: width 0.3s ease, height 0.3s ease; /* Tranziție pentru dimensiunile containerului */
+  min-width: 150px; /* Dimensiune minimă pentru lățimea containerului */
+  min-height: 150px; /* Dimensiune minimă pentru înălțimea containerului */
+  max-width: 500px; /* Dimensiune maximă pentru lățimea containerului */
+  max-height: 500px; /* Dimensiune maximă pentru înălțimea containerului */
 }
 
 /* Când dai hover pe <aside>, mărește-l */
