@@ -55,14 +55,13 @@ nav ul li a:hover {
 }
 
 section {
-    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrare verticală */
+    align-items: center; /* Centrare orizontală */
+    min-height: 50vh; /* Asigură o înălțime minimă pentru a permite centrarea verticală */
     padding: 20px;
-    max-width: 800px;
-    margin: auto; /* Centrare pe orizontală */
-    background: white;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrare orizontală a textului */
 }
 
 aside {
