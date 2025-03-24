@@ -26,7 +26,7 @@ aside img {
 /* Când dai hover pe imagine */
 aside img:hover {
   transform: scale(2); /* Mărește imaginea la 200% din dimensiunea originală */
-  transform-origin: right center; /* Setează centrul de scalare la stânga, astfel încât imaginea să se mărească spre dreapta */
+  transform-origin: right top; /* Setează centrul de scalare la stânga, astfel încât imaginea să se mărească spre dreapta */
 }
 
 /* Containerul <aside> pentru a preveni ieșirea imaginii */
