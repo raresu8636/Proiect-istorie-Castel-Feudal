@@ -14,6 +14,7 @@ body {
     color: #333;
     box-sizing: border-box;
 }
+
 /* Stilul pentru imaginea din <aside> */
 aside img {
   transition: transform 0.3s ease; /* Efect de tranziție pentru mărirea imaginii */
@@ -26,15 +27,26 @@ aside img {
 /* Când dai hover pe imagine */
 aside img:hover {
   transform: scale(2); /* Mărește imaginea la 200% din dimensiunea originală */
-  transform-origin: right top; /* Setează centrul de scalare la stânga, astfel încât imaginea să se mărească spre dreapta */
+  transform-origin: right top; /* Setează centrul de scalare la dreapta sus */
 }
 
 /* Containerul <aside> pentru a preveni ieșirea imaginii */
 aside {
+  grid-area: images;
+  padding: 20px;
+  text-align: center;
   overflow: hidden; /* Ascunde orice parte a imaginii care iese din container */
   position: relative; /* Permite manipularea poziției elementelor din interior */
+  transition: width 0.3s ease, height 0.3s ease; /* Tranziție pentru dimensiunile containerului */
 }
 
+/* Când dai hover pe <aside>, mărește-l */
+aside:hover {
+  width: auto; /* Permite containerului să crească pentru a se potrivi imaginii mărite */
+  height: auto; /* Permite containerului să crească pe verticală */
+}
+
+/* Stilul pentru header */
 header {
     grid-area: header;
     background-color: #333;
@@ -43,6 +55,7 @@ header {
     text-align: center;
 }
 
+/* Stilul pentru sidebar */
 nav {
     grid-area: sidebar;
     background: #8d6e63;
@@ -74,6 +87,7 @@ nav ul li a:hover {
     background-color: #6d4c41;
 }
 
+/* Stilul pentru content */
 section {
     grid-area: content;
     padding: 20px;
@@ -86,12 +100,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-aside {
-    grid-area: images;
-    padding: 20px;
-    text-align: center;
-}
-
+/* Stilul pentru imagine în <aside> */
 aside img {
     max-width: 100%;
     height: auto;
@@ -99,6 +108,7 @@ aside img {
     border-radius: 5px;
 }
 
+/* Stilul pentru footer */
 footer {
     grid-area: footer;
     background-color: #222;
@@ -108,6 +118,7 @@ footer {
     margin-top: auto;
 }
 
+/* Stilul pentru butoane */
 button {
     background: #6d4c41;
     color: white;
@@ -121,20 +132,12 @@ button:hover {
     background: #8d6e63;
 }
 
+/* Ascunde butonul Home, deoarece nav servește drept meniu */
 .home-button {
-    display: none; /* Ascunde butonul Home, deoarece nav servește drept meniu */
+    display: none;
 }
 
-/* Elimină stilurile vechi pentru img, deoarece imaginile vor fi în aside */
-/* img { */
-/*    max-width: 200px; */
-/*    height: auto; */
-/*    position: absolute; */
-/*    top: 200px; */
-/*    left: -100px; */
-/*    z-index: -1; */
-/* } */
-
+/* Stil pentru canvas */
 canvas {
     display: block;
     margin: 0 auto;
@@ -142,6 +145,7 @@ canvas {
     height: auto;
 }
 
+/* Stil pentru imagini în categorii */
 .categories .category img {
     max-width: 150px; /* Limitează lățimea maximă a imaginilor */
     height: auto; /* Păstrează aspectul proporțional */
