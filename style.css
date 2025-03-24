@@ -81,24 +81,30 @@ aside img {
 .zoom-container {
     position: relative;
     display: inline-block;
-    overflow: hidden; /* Ascunde orice parte din imagine care depășește containerul */
+    overflow: hidden;
+    width: 100%;  /* Asigură că containerul va ocupa întreaga lățime a secțiunii */
+    height: auto; /* Permite containerului să se ajusteze pe înălțime */
 }
 
 /* Stiluri pentru imagine */
 .zoom-image {
-    width: 100%;  /* Imaginea va avea lățimea de 100% */
-    height: auto;  /* Păstrează raportul de aspect corect */
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;  /* Tranziție lină pe transformare */
-    object-fit: cover; /* Asigură că imaginea se va ajusta corect */
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    object-fit: cover;
     display: block;
 }
 
 /* Efectul de zoom la hover */
 .zoom-container:hover .zoom-image {
-    transform: scale(2); /* Mărește imaginea de două ori */
-    width: 100vw; /* Lățimea va fi 100% din lățimea vizibilă a ecranului */
-    height: 100vh; /* Înălțimea va fi 100% din înălțimea vizibilă a ecranului */
-    object-fit: cover; /* Imaginea va acoperi întreaga zonă */
+    transform: scale(2);  /* Mărește imaginea de două ori */
+    width: 100vw;  /* Lățimea va fi 100% din lățimea ferestrei */
+    height: 100vh; /* Înălțimea va fi 100% din înălțimea ferestrei */
+    object-fit: cover; /* Imaginea va acoperi întregul ecran */
+    position: absolute; /* Permite poziționarea imaginii în afacerea containerului */
+    top: 50%; /* Centerază imaginea pe verticală */
+    left: 50%; /* Centerază imaginea pe orizontală */
+    transform: translate(-50%, -50%) scale(2);  /* Mărește și centrează imaginea */
 }
 
 
