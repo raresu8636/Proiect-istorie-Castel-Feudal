@@ -13,7 +13,18 @@ body {
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
+}/* Selectează toate imaginile de pe margini */
+img {
+  transition: transform 0.3s ease; /* Efect de tranziție pentru mărirea imaginii */
+  width: 150px; /* Lățimea normală a imaginii */
+  height: auto; /* Menține proporțiile imaginii */
 }
+
+/* Când dai hover pe imagine, se mărește */
+img:hover {
+  transform: scale(1.2); /* Mărește imaginea la 120% din dimensiunea originală */
+}
+
 
 header {
     grid-area: header;
