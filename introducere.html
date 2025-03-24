@@ -4,82 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introducere în Castelele Feudale</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        header, footer {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        nav ul li a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        section {
-            margin: 20px;
-        }
-
-        aside {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .zoom-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .zoom-image {
-            width: 300px;
-            transition: transform 0.3s ease;
-        }
-
-        .zoom-image:hover {
-            transform: scale(1.5);
-            cursor: zoom-in;
-        }
-
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .close-button:hover {
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-    </style>
-    <script>
-        function closeZoom() {
-            const zoomImages = document.querySelectorAll('.zoom-container');
-            zoomImages.forEach((zoomContainer) => {
-                zoomContainer.querySelector('.zoom-image').style.transform = 'scale(1)';
-            });
-        }
-    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -114,14 +40,8 @@
         <p>Castelul era centrul administrativ al domeniului feudal, de unde seniorul își exercita autoritatea și controla activitățile economice și sociale. De asemenea, castelul servea ca refugiu pentru țărani în caz de invazii sau conflicte.</p>
     </section>
     <aside>
-        <div class="zoom-container">
-            <img src="castle.jpg" alt="Castel Feudal" class="zoom-image">
-            <button class="close-button" onclick="closeZoom()">X</button>
-        </div>
-        <div class="zoom-container">
-            <img src="http://2.bp.blogspot.com/-YI68-lfUzGQ/VC_qAHeiBEI/AAAAAAAAAo0/pkaO2g1PIjY/s1600/domeniu_feudal.jpg" alt="Domeniul Feudal" class="zoom-image">
-            <button class="close-button" onclick="closeZoom()">X</button>
-        </div>
+        <img src="castle.jpg" alt="Castel Feudal">
+        <img src="http://2.bp.blogspot.com/-YI68-lfUzGQ/VC_qAHeiBEI/AAAAAAAAAo0/pkaO2g1PIjY/s1600/domeniu_feudal.jpg" alt="Domeniul Feudal">
     </aside>
     <footer>
         <p>Site Realizat de Huruba Rares, Liceul National de informatica Arad, Clasa a X-a B</p>
