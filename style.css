@@ -13,18 +13,27 @@ body {
     background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
-}/* Selectează toate imaginile de pe margini */
-img {
+}
+/* Stilul pentru imaginea din <aside> */
+aside img {
   transition: transform 0.3s ease; /* Efect de tranziție pentru mărirea imaginii */
   width: 150px; /* Lățimea normală a imaginii */
   height: auto; /* Menține proporțiile imaginii */
+  display: block; /* Asigură că imaginea se comportă ca un element de bloc */
+  margin: 0 auto; /* Center image inside the container */
 }
 
-/* Când dai hover pe imagine, se mărește */
-img:hover {
-  transform: scale(2); /* Mărește imaginea la 120% din dimensiunea originală */
+/* Când dai hover pe imagine */
+aside img:hover {
+  transform: scale(2); /* Mărește imaginea la 200% din dimensiunea originală */
+  transform-origin: left center; /* Setează centrul de scalare la stânga, astfel încât imaginea să se mărească spre dreapta */
 }
 
+/* Containerul <aside> pentru a preveni ieșirea imaginii */
+aside {
+  overflow: hidden; /* Ascunde orice parte a imaginii care iese din container */
+  position: relative; /* Permite manipularea poziției elementelor din interior */
+}
 
 header {
     grid-area: header;
