@@ -22,7 +22,7 @@ img {
 
 /* Când dai hover pe imagine, se mărește */
 img:hover {
-  transform: scale(1.2); /* Mărește imaginea la 120% din dimensiunea originală */
+  transform: scale(2); /* Mărește imaginea la 120% din dimensiunea originală */
 }
 
 
