@@ -27,7 +27,7 @@ aside img {
   cursor: pointer; /* Adaugă un cursor de tip mână */
 }
 
-aside img.hovered {
+//*aside img.hovered {
   transform: scale(2) translateX(-50%);
   transform-origin: right top;
   z-index: 10;
