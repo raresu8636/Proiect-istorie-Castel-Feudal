@@ -28,7 +28,7 @@ aside img {
 }
 
 aside img.hovered {
-  transform: scale(6) translateX(-50%);
+  transform: scale(5) translateX(-50%);
   transform-origin: right top;
   z-index: 10;
 }
