@@ -178,5 +178,11 @@ document.addEventListener('DOMContentLoaded', function() {
         img.addEventListener('mouseleave', function() {
             this.classList.remove('hovered');
         });
+
+        img.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the link from opening
+
+            this.classList.toggle('hovered');
+        });
     });
 });
