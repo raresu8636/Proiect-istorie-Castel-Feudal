@@ -17,13 +17,14 @@ body {
 
 /* Stilul pentru imaginea din <aside> */
 aside img {
-  transition: transform 0.3s ease; /* Efect de tranziție pentru mărirea imaginii */
-  width: 150px; /* Lățimea normală a imaginii */
-  height: auto; /* Menține proporțiile imaginii */
-  display: block; /* Asigură că imaginea se comportă ca un element de bloc */
-  margin: 10px 0; /* Spațiu între imagini */
-  position: relative; /* Poziționare normală în container */
-  z-index: 1; /* Asigură că imaginea este deasupra altor elemente */
+  transition: transform 0.3s ease;
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  position: relative;
+  z-index: 1;
+  cursor: pointer; /* Adaugă un cursor de tip mână */
 }
 
 /* Când dai hover pe imagine */
@@ -34,9 +35,9 @@ aside img:hover {
 }
 
 aside img.hovered {
-  transform: scale(2) translateX(-50%); /* Mărește imaginea la 200% din dimensiunea originală și o mută spre stânga */
-  transform-origin: right top; /* Setează centrul de scalare în colțul din dreapta sus */
-  z-index: 10; /* Pune imaginea în față când este mărită */
+  transform: scale(2) translateX(-50%);
+  transform-origin: right top;
+  z-index: 10;
 }
 
 /* Containerul <aside> pentru imagini */
