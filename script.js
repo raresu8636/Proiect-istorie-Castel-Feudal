@@ -167,4 +167,16 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Elementul cu ID-ul "quiz-form" nu a fost găsit.');
     }
+
+    const images = document.querySelectorAll('aside img');
+
+    images.forEach(img => {
+        img.addEventListener('mouseenter', function() {
+            this.classList.add('hovered');
+        });
+
+        img.addEventListener('mouseleave', function() {
+            this.classList.remove('hovered');
+        });
+    });
 });
