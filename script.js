@@ -113,68 +113,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Verifică dacă există elementul famousCastlesChart
-    if (document.getElementById('famousCastlesChart')) {
-        var ctx = document.getElementById('famousCastlesChart').getContext('2d');
-        var famousCastlesChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Castelul Bran', 'Castelul Corvinilor', 'Castelul Peleș'],
-                datasets: [{
-                    label: 'Castele Faimoase',
-                    data: [40, 30, 30],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-    }
-
-    const quizForm = document.getElementById('quiz-form');
-    const resultsDiv = document.getElementById('results');
-
-    if (quizForm) {
-        quizForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const answers = {
-                q1: document.querySelector('input[name="q1"]:checked')?.value,
-                q2: document.querySelector('input[name="q2"]:checked')?.value,
-                q3: document.querySelector('input[name="q3"]:checked')?.value,
-                q4: document.querySelector('input[name="q4"]:checked')?.value
-            };
-
-            let score = 0;
-            if (answers.q1 === 'a') score++;
-            if (answers.q2 === 'b') score++;
-            if (answers.q3 === 'b') score++;
-            if (answers.q4 === 'b') score++;
-
-            resultsDiv.textContent = `Ai obținut ${score} din 4 puncte.`;
-        });
-    } else {
-        console.error('Elementul cu ID-ul "quiz-form" nu a fost găsit.');
-    }
-
     const images = document.querySelectorAll('aside img');
+    let activeImage = null;
 
     images.forEach(img => {
         img.addEventListener('click', function(event) {
             event.preventDefault();
+            
+            if (activeImage && activeImage !== this) {
+                activeImage.classList.remove('hovered');
+            }
+            
             this.classList.toggle('hovered');
+            activeImage = this.classList.contains('hovered') ? this : null;
         });
     });
 });
