@@ -95,8 +95,9 @@ section {
     max-width: 800px;
     margin: auto; /* Centrare pe orizontală */
     background: white;
-    margin-bottom: 20px;
-    align: top;
+    margin-top: 20px; /* Adaugă spațiu de sus pentru aliniere */
+    margin-bottom: 0; /* Elimină spațiul de jos */
+    align-items: flex-start; /* Aliniere la partea de sus */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
