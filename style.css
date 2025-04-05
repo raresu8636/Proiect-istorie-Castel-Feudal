@@ -149,27 +149,26 @@ canvas {
 /* Stil pentru tooltip */
 .tooltip {
     position: relative;
-    color: #007bff; /* Albastru ca hyperlink */
-    text-decoration: none;
     cursor: pointer;
-}
-
-.tooltip:hover {
-    text-decoration: underline; /* Subliniază textul la hover */
+    text-decoration: underline;
 }
 
 .tooltip-content {
     display: none;
     position: absolute;
-    bottom: 120%; /* Poziționează imaginea deasupra textului */
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px; /* Ajustează dimensiunea imaginii */
+    background-color: #fff;
     border: 1px solid #ccc;
-    background: #fff;
-    padding: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
     z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-content img {
+    max-width: 100%;
+    height: auto;
 }
 
 .tooltip:hover .tooltip-content {
