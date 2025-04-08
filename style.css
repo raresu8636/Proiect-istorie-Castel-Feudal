@@ -21,34 +21,34 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Stilul pentru imaginea din <aside> */
 aside img {
-  transition: transform 0.3s ease;
-  width: 150px;
-  height: auto;
-  display: block;
-  margin: 10px 0;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
 }
 
-aside img.hovered {
-  transform: scale(5) translateX(-50%);
-  transform-origin: right top;
-  z-index: 10;
+aside img.active {
+    transform: scale(5) translateX(-50%);
+    transform-origin: right top;
+    z-index: 10;
 }
 
 /* Containerul <aside> pentru imagini */
 aside {
-  grid-area: images;
-  padding: 20px;
-  text-align: center;
-  display: block; /* Asigură că imaginile sunt afișate una sub alta */
-  position: relative;
-  overflow: visible; /* Permite imaginilor să iasă din container la hover */
-  min-width: 150px; /* Dimensiune minimă pentru lățimea containerului */
-  min-height: 150px; /* Dimensiune minimă pentru înălțimea containerului */
-  max-width: 500px; /* Dimensiune maximă pentru lățimea containerului */
-  max-height: 500px; /* Dimensiune maximă pentru înălțimea containerului */
+    grid-area: images;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    position: relative;
+    overflow: visible;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 /* Stilul pentru header */
@@ -65,13 +65,12 @@ nav {
     grid-area: sidebar;
     background: #8d6e63;
     padding: 20px;
-    text-align: left; /* Aliniere la stânga */
+    text-align: left;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: left; /* Aliniere la stânga */
     margin: 0;
 }
 
@@ -97,11 +96,9 @@ section {
     grid-area: content;
     padding: 20px;
     max-width: 800px;
-    margin: auto; /* Centrare pe orizontală */
+    margin: auto;
     background: white;
-    margin-top: 20px; /* Adaugă spațiu de sus pentru aliniere */
-    margin-bottom: 0; /* Elimină spațiul de jos */
-    align-items: flex-start; /* Aliniere la partea de sus */
+    margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
