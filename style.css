@@ -126,3 +126,38 @@ button {
 button:hover {
     background: #8d6e63;
 }
+
+/* Stil pentru elementele cu clasa tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-content {
+    display: none; /* Ascunde conținutul implicit */
+    position: absolute;
+    top: 100%; /* Poziționează conținutul sub elementul tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    width: 300px; /* Ajustează dimensiunea imaginii */
+    text-align: center;
+    pointer-events: none; /* Previne interacțiunea cu imaginea */
+}
+
+.tooltip:hover .tooltip-content {
+    display: block; /* Afișează conținutul la hover */
+    pointer-events: auto; /* Permite interacțiunea doar pe hover-ul textului */
+}
+
+.tooltip .tooltip-content img {
+    max-width: 100%; /* Imaginea se ajustează la dimensiunea containerului */
+    height: auto;
+    border-radius: 5px;
+}
