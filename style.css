@@ -161,3 +161,38 @@ button:hover {
     height: auto;
     border-radius: 5px;
 }
+
+/* Stil pentru lacune */
+.blank {
+    display: inline-block;
+    border-bottom: 2px solid #000;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    color: #555;
+    position: relative;
+}
+
+/* Stil pentru dropdown-ul de opțiuni */
+.blank-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 150px;
+}
+
+.blank-options div {
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.blank-options div:hover {
+    background: #f0f0f0;
+}
