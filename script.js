@@ -44,6 +44,15 @@ document.getElementById('submit-quiz').addEventListener('click', function () {
     resultsDiv.innerHTML += `<p>Scor total: ${totalScore} puncte.</p>`;
 });
 
+// Funcție pentru a randomiza un array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 // Variabilă globală pentru a urmări dropdown-ul activ
 let activeDropdown = null;
 
@@ -72,7 +81,9 @@ document.querySelectorAll('.blank').forEach(blank => {
         }
 
         // Creăm dropdown-ul cu opțiuni
-        const options = ['creneluri', 'turnuri de apărare', 'sălii mari', 'Hunedoara', 'gotică', 'Leonardo da Vinci'];
+        let options = ['creneluri', 'turnuri de apărare', 'sălii mari', 'Hunedoara', 'gotică', 'Leonardo da Vinci'];
+        options = shuffleArray(options); // Randomizează opțiunile
+
         const dropdown = document.createElement('div');
         dropdown.classList.add('blank-options');
 
