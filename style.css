@@ -137,9 +137,9 @@ button:hover {
 .tooltip .tooltip-content {
     display: none; /* Ascunde conținutul implicit */
     position: absolute;
-    top: 100%; /* Poziționează conținutul sub elementul tooltip */
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%; /* Poziționează vertical la mijloc */
+    left: 100%; /* Poziționează în dreapta textului */
+    transform: translateY(-50%); /* Ajustează pentru alinierea verticală */
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;

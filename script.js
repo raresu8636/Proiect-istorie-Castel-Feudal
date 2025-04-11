@@ -173,3 +173,32 @@ document.getElementById('reset-quiz').addEventListener('click', function () {
     resultsDiv.innerHTML = '';
     resultsDiv.dataset.blanksScore = 0;
 });
+
+// Funcționalitate pentru imaginile din tooltip
+document.querySelectorAll('.tooltip').forEach(tooltip => {
+    tooltip.addEventListener('click', function (event) {
+        event.preventDefault(); // Previne comportamentul implicit al link-ului
+
+        // Găsește imaginea din tooltip
+        const image = this.querySelector('.tooltip-content img');
+
+        // Creează un container pentru afișarea imaginii în dreapta
+        let imageContainer = document.querySelector('.tooltip-image-container');
+        if (!imageContainer) {
+            imageContainer = document.createElement('div');
+            imageContainer.classList.add('tooltip-image-container');
+            document.body.appendChild(imageContainer);
+        }
+
+        // Afișează imaginea în container
+        imageContainer.innerHTML = `
+            <img src="${image.src}" alt="${image.alt}" class="tooltip-image">
+        `;
+
+        // Adaugă eveniment pentru deschiderea imaginii într-un tab nou
+        const displayedImage = imageContainer.querySelector('.tooltip-image');
+        displayedImage.addEventListener('click', () => {
+            window.open(image.src, '_blank');
+        });
+    });
+});
