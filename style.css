@@ -36,7 +36,7 @@ aside img.active {
     transform: scale(5) translate(-50%, -50%);
     transform-origin: center center;
     position: fixed;
-    top: 80%;
+    top: 85%;
     left: 70%;
     z-index: 10;
 }
