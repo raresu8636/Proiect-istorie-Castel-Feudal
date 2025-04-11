@@ -11,11 +11,6 @@ images.forEach(img => {
 
         this.classList.toggle('active');
         activeImage = this.classList.contains('active') ? this : null;
-
-        // Reset position if deselected
-        if (!this.classList.contains('active')) {
-            this.style.position = '';
-        }
     });
 });
 

@@ -10,8 +10,8 @@ body {
         "header header header"
         "sidebar content images"
         "footer footer footer";
-    background: url('BACKGROUND.jpg') no-repeat center center fixed; /* Setează imaginea ca fundal */
-    background-size: cover; /* Imaginea acoperă întregul fundal */
+        background: url('BACKGROUND.jpg') no-repeat center center fixed; /* Setează imaginea ca fundal */
+        background-size: cover; /* Imaginea acoperă întregul fundal */
     color: #333;
     box-sizing: border-box;
 }
