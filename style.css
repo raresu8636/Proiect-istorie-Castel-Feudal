@@ -50,6 +50,10 @@ aside {
     min-height: 150px;
     max-width: 500px;
     max-height: 500px;
+    color: white; /* Setează culoarea textului la alb */
+}
+aside p {
+    color: white; /* Asigură că paragrafele din <aside> au text alb */
 }
 
 /* Stilul pentru header */
