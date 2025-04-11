@@ -10,8 +10,7 @@ body {
         "header header header"
         "sidebar content images"
         "footer footer footer";
-    background: url('BACKGROUND.jpg') no-repeat center center fixed; /* Setează imaginea ca fundal */
-    background-size: cover; /* Imaginea acoperă întregul fundal */
+    background-color: #f4f4f4;
     color: #333;
     box-sizing: border-box;
 }
@@ -33,8 +32,11 @@ aside img {
 }
 
 aside img.active {
-    transform: scale(5) translateX(-50%);
-    transform-origin: right top;
+    transform: scale(5) translate(-50%, -50%);
+    transform-origin: center center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     z-index: 10;
 }
 
@@ -44,16 +46,12 @@ aside {
     padding: 20px;
     text-align: center;
     display: block;
-    position: center;
+    position: relative;
     overflow: visible;
     min-width: 150px;
     min-height: 150px;
     max-width: 500px;
     max-height: 500px;
-    color: white; /* Setează culoarea textului la alb */
-}
-aside p {
-    color: white; /* Asigură că paragrafele din <aside> au text alb */
 }
 
 /* Stilul pentru header */
