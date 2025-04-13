@@ -29,8 +29,20 @@ document.getElementById('submit-quiz').addEventListener('click', function () {
     // Iterate through each question and check the answers
     for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
         const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
-        if (selectedOption && selectedOption.value === correctAnswer) {
-            quizScore++;
+        const options = document.querySelectorAll(`input[name="${question}"]`);
+
+        // Resetează culorile pentru toate opțiunile
+        options.forEach(option => {
+            option.parentElement.style.color = ''; // Elimină stilurile anterioare
+        });
+
+        if (selectedOption) {
+            if (selectedOption.value === correctAnswer) {
+                quizScore++;
+                selectedOption.parentElement.style.color = 'green'; // Evidențiază răspunsul corect
+            } else {
+                selectedOption.parentElement.style.color = 'red'; // Evidențiază răspunsul greșit
+            }
         }
     }
 
