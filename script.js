@@ -1,18 +1,3 @@
-const images = document.querySelectorAll('aside img');
-let activeImage = null;
-
-images.forEach(img => {
-    img.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        if (activeImage && activeImage !== this) {
-            activeImage.classList.remove('active');
-        }
-
-        this.classList.toggle('active');
-        activeImage = this.classList.contains('active') ? this : null;
-    });
-});
 
 // Verificare răspunsuri pentru quiz
 document.getElementById('submit-quiz').addEventListener('click', function () {
@@ -186,6 +171,8 @@ document.getElementById('reset-quiz').addEventListener('click', function () {
     resultsDiv.dataset.blanksScore = 0;
 });
 
+
+
 // Funcționalitate pentru imaginile din tooltip
 document.querySelectorAll('.tooltip').forEach(tooltip => {
     tooltip.addEventListener('click', function (event) {
@@ -212,5 +199,22 @@ document.querySelectorAll('.tooltip').forEach(tooltip => {
         displayedImage.addEventListener('click', () => {
             window.open(image.src, '_blank');
         });
+    });
+});
+
+//Imagini pentru laterala textului
+const images = document.querySelectorAll('aside img');
+let activeImage = null;
+
+images.forEach(img => {
+    img.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        if (activeImage && activeImage !== this) {
+            activeImage.classList.remove('active');
+        }
+
+        this.classList.toggle('active');
+        activeImage = this.classList.contains('active') ? this : null;
     });
 });
